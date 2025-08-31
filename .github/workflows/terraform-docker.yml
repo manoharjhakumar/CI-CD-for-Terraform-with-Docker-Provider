@@ -18,6 +18,10 @@ jobs:
         with:
           terraform_version: 1.5.0
 
+      - name: Verify Docker
+        run: |
+          docker --version
+          docker ps
 
       - name: Terraform Init
         run: terraform init
